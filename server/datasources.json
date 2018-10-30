@@ -4,10 +4,10 @@
     "connector": "memory"
   },
   "mymongo": {
-    "name": "mymongo",
     "host": "localhost",
     "port": 27017,
     "database": "loopback_db",
+    "name": "mymongo",
     "connector": "mongodb"
   }
 }
