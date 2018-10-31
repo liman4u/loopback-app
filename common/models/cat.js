@@ -33,4 +33,11 @@ module.exports = function(Cat) {
         returns: {arg: 'adoptable', type: 'boolean'}
     });
 
+    Cat.validatesInclusionOf('gender',{'in' : ['male','female'] });
+    Cat.validatesNumeracalityOf('age',{int:true});
+
+    Cat.validates('age',function(err){
+        if(this.age <= 0) err();
+    },{'message':'Age must be positive'});
+
 };
