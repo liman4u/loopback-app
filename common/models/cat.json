@@ -30,5 +30,8 @@
       "permission": "ALLOW"
     }
   ],
-  "methods": {}
+  "methods": {},
+  "scopes": {
+    "oldcats": { "where" : { "age" : {"gt" : 10} } }
+  }
 }
