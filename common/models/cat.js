@@ -34,9 +34,9 @@ module.exports = function(Cat) {
     });
 
     Cat.validatesInclusionOf('gender',{'in' : ['male','female'] });
-    Cat.validatesNumeracalityOf('age',{int:true});
+    Cat.validatesNumericalityOf('age',{int:true});
 
-    Cat.validates('age',function(err){
+    Cat.validate('age',function(err){
         if(this.age <= 0) err();
     },{'message':'Age must be positive'});
 
